@@ -10,7 +10,6 @@
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/monoton"
         android:text="EDDRIX"
         android:textAlignment="center"
         android:textColor="@color/black"

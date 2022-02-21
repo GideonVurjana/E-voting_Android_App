@@ -62,10 +62,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         toolbar.setTitle("E-Voting");
-        toolbar.setTitleTextColor(getResources().getColor(R.color.mred));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorAccent));
         setSupportActionBar(toolbar);
 
-        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
 
 

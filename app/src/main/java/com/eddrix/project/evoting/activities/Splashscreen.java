@@ -33,7 +33,7 @@ public class Splashscreen extends AppCompatActivity {
 
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(this.getResources().getColor(R.color.colorAccent));
+            window.setStatusBarColor(this.getResources().getColor(R.color.black));
             window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
 
@@ -41,7 +41,7 @@ public class Splashscreen extends AppCompatActivity {
         }else if(Build.VERSION.SDK_INT<22){
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(this.getResources().getColor(R.color.colorAccent));
+            window.setStatusBarColor(this.getResources().getColor(R.color.black));
 
         }
 
@@ -53,15 +53,15 @@ public class Splashscreen extends AppCompatActivity {
 
             MyPreferences myPreferences=new MyPreferences(getApplicationContext());
 
-            if(!myPreferences.getVerified()){
+            //if(!myPreferences.getVerified()){
 
            // startActivity(new Intent(Splashscreen.this, ActivityLogin.class));
 
 
-            }else{
+            //}else{
                 //launch login activity..
                 startActivity(new Intent(Splashscreen.this,MainActivity.class));
-            }
+            //}
 
             finish();
         }, TIME);

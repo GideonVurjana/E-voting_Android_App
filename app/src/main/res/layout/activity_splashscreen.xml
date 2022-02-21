@@ -2,14 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/colorAccent"
+    android:background="@color/black"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_width="0dp"
+    <TextView
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/_20sdp"
+        android:fontFamily="serif"
+        android:text="E-voting"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

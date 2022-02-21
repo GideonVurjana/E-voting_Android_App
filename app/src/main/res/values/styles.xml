@@ -1,0 +1,64 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+       <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="colorAccent">@color/gradient_start_color</item>
+
+    </style>
+
+    <style name="MyMaterialTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowContentTransitions">true</item>
+
+<!--        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>-->
+        <item name="colorPrimary">@color/gradient_start_color</item>
+        <item name="colorPrimaryVariant">#ffffff</item>
+        <item name="colorOnPrimary">#ffffff</item>
+        <item name="colorSecondary">@color/gradient_start_color</item>
+        <item name="colorSecondaryVariant">@color/gradient_start_color</item>
+        <item name="colorOnSecondary">#FFFFFF</item>
+        <item name="colorError">#F44336</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorSurface">#FFFFFF</item>
+        <item name="colorOnSurface">@color/gradient_start_color</item>
+        <item name="android:colorBackground">#ffffff</item>
+        <item name="colorOnBackground">@color/gradient_start_color</item>
+        <item name="ratingBarStyle">@style/MyRatingBar</item>
+<!--      <item name="android:statusBarColor">#aaffffff</item>-->
+
+
+    </style>
+
+    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="colorAccent">#6200ea</item>
+        <item name="android:colorControlNormal">#f9a825</item>
+    </style>
+
+<!--    <style name="WhiteAppBottomSheetDialogTheme"-->
+<!--        parent="Theme.Design.Light.BottomSheetDialog">-->
+<!--        <item name="bottomSheetStyle">@style/AppModalStyle</item>-->
+<!--    </style>-->
+
+<!--    <style name="WhiteAppModalStyle"-->
+<!--        parent="Widget.Design.BottomSheet.Modal">-->
+<!--        <item name="android:background">@drawable/white_bottom_sheet_background</item>-->
+<!--    </style>-->
+
+<!--    <style name="AppBottomSheetDialogTheme"-->
+<!--        parent="Theme.Design.Light.BottomSheetDialog">-->
+<!--        <item name="bottomSheetStyle">@style/AppModalStyle</item>-->
+<!--    </style>-->
+
+<!--    <style name="AppModalStyle"-->
+<!--        parent="Widget.Design.BottomSheet.Modal">-->
+<!--        <item name="android:background">@drawable/bottom_sheet_background</item>-->
+<!--    </style>-->
+
+
+        <declare-styleable name="ExpandableTextView">
+            <attr name="trimLength" format="integer"/>
+        </declare-styleable>
+
+</resources>

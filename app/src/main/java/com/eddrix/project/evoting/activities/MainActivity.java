@@ -1,8 +1,10 @@
-package com.eddrix.project.evoting;
+package com.eddrix.project.evoting.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.eddrix.project.evoting.R;
 
 public class MainActivity extends AppCompatActivity {
 

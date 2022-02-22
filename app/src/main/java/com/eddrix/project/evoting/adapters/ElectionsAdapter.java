@@ -55,6 +55,14 @@ public class ElectionsAdapter extends RecyclerView.Adapter<ElectionsAdapter.MyVi
             Glide.with(context).load(R.drawable.unactive_election).into(holder.active);
 
 
+        holder.cl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //show all candidates who are participating the selected election...
+
+
+            }
+        });
     }
 
     @Override
@@ -74,6 +82,7 @@ public class ElectionsAdapter extends RecyclerView.Adapter<ElectionsAdapter.MyVi
 
     static class MyViewHolder extends RecyclerView.ViewHolder{
 
+        ConstraintLayout cl;
         TextView name,startdate,enddate;
         ImageView active;
 
@@ -81,6 +90,7 @@ public class ElectionsAdapter extends RecyclerView.Adapter<ElectionsAdapter.MyVi
             super(itemView);
 
             name=itemView.findViewById(R.id.textView);
+            cl=itemView.findViewById(R.id.cl);
             startdate=itemView.findViewById(R.id.textView2);
             enddate=itemView.findViewById(R.id.textView3);
             active=itemView.findViewById(R.id.imageView);

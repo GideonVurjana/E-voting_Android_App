@@ -49,11 +49,11 @@ public class ElectionFragment extends Fragment {
 
         List<Election> electionList=new ArrayList<>();
 
-        electionList.add(new Election("Panchayat Elections","Start Date: 12/10/2022","End Date : 14/10/2022",true));
-        electionList.add(new Election("Something Elections","Start Date: 12/10/2022","End Date : 14/10/2022",false));
-        electionList.add(new Election("Everything Elections","Start Date: 12/10/2022","End Date : 14/10/2022",true));
-        electionList.add(new Election("Don't know Elections","Start Date: 12/10/2022","End Date : 14/10/2022",false));
-        electionList.add(new Election("Whatever Elections","Start Date: 12/10/2022","End Date : 14/10/2022",true));
+        electionList.add(new Election("Panchayat Elections","Start Date: 12/10/2022","End Date : 14/10/2022",true,1));
+        electionList.add(new Election("Something Elections","Start Date: 12/10/2022","End Date : 14/10/2022",false,2));
+        electionList.add(new Election("Everything Elections","Start Date: 12/10/2022","End Date : 14/10/2022",true,3));
+        electionList.add(new Election("Don't know Elections","Start Date: 12/10/2022","End Date : 14/10/2022",false,4));
+        electionList.add(new Election("Whatever Elections","Start Date: 12/10/2022","End Date : 14/10/2022",true,5));
 
 
         ElectionsAdapter electionsAdapter=new ElectionsAdapter(electionList,context);

@@ -1,7 +1,5 @@
 package com.eddrix.project.evoting.activities;
 
-
-import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.transition.Fade;
@@ -13,27 +11,18 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.app.ActivityOptionsCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.eddrix.project.evoting.R;
-import com.eddrix.project.evoting.adapters.ElectionCandidatesAdpater;
-import com.eddrix.project.evoting.design.Space;
-import com.eddrix.project.evoting.models.ElectionCandidates;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
-public class CandidateActivity extends AppCompatActivity {
+public class CandidateDP_Screen extends AppCompatActivity {
+    ImageView img;
     Toolbar toolbar;
-    ImageView dp_pic;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         Window window = this.getWindow();
         if (Build.VERSION.SDK_INT >= 23) {
 
@@ -51,10 +40,12 @@ public class CandidateActivity extends AppCompatActivity {
             window.setStatusBarColor(this.getResources().getColor(R.color.black));
 
         }
-        setContentView(R.layout.activity_candidate_vote);
+
+        setContentView(R.layout.candidate_dp_screen);
 
         toolbar=findViewById(R.id.toolbar);
-        toolbar.setTitle("Janasena Party");
+
+        toolbar.setTitle("Pavan Kalyan");
         toolbar.setTitleTextColor(getResources().getColor(R.color.colorAccent));
         setSupportActionBar(toolbar);
 
@@ -62,35 +53,16 @@ public class CandidateActivity extends AppCompatActivity {
 
         toolbar.setNavigationIcon(R.drawable.back);
         toolbar.setNavigationOnClickListener(view -> finish());
-        dp_pic=findViewById(R.id.imageView2);
 
-        dp_pic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                viewDP();
-            }
-        });
-
-
-
-
-    }
-
-    private void viewDP() {
         Fade fade = new Fade();
-        View decor = getWindow().getDecorView();
-        //below 3 lines of code is to exclude action bar,title bar and navigation bar from animation.
-        fade.excludeTarget(decor.findViewById(R.id.action_bar_container), true);
-        fade.excludeTarget(android.R.id.statusBarBackground, true);
-        fade.excludeTarget(android.R.id.navigationBarBackground, true);
+        img=findViewById(R.id.imageView7);
+        Glide.with(this).load(R.drawable.pavan_janasena).into(img);
+
+        // here also we are exclusing status bar, action bar and navigation bar from animation.
+//        fade.excludeTarget(android.R.id.statusBarBackground, true);
+//        fade.excludeTarget(android.R.id.navigationBarBackground, true);
+        // below methods are used for adding enter and exit transition.
         getWindow().setEnterTransition(fade);
-        //we are also setting fade animation for exit transition.
         getWindow().setExitTransition(fade);
-        ActivityOptionsCompat activityOptionsCompat =
-                ActivityOptionsCompat.makeSceneTransitionAnimation(this,dp_pic,"profile");
-        Intent in = new Intent(this,CandidateDP_Screen.class);
-        startActivity(in,activityOptionsCompat.toBundle());
-
     }
-
 }

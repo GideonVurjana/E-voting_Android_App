@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/btn_gradient_style.xml" value="0.209375" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.209375" />
         <entry key="app/src/main/res/layout/activity_candidate_vote.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_elected_candidates.xml" value="0.12001811594202899" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.2" />
+        <entry key="app/src/main/res/layout/candidate_dp_screen.xml" value="0.12001811594202899" />
         <entry key="app/src/main/res/layout/candidates_elected_deisgn.xml" value="0.15" />
         <entry key="app/src/main/res/layout/election_row_design.xml" value="0.16" />
         <entry key="app/src/main/res/layout/fragment_election.xml" value="0.12681159420289856" />

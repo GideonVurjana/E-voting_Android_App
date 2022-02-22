@@ -37,6 +37,9 @@
         <activity
             android:screenOrientation="portrait"
             android:name=".activities.CandidateActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activities.CandidateDP_Screen" />
     </application>
 
 </manifest>

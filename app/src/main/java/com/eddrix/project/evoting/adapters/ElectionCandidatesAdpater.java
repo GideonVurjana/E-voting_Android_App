@@ -2,6 +2,7 @@ package com.eddrix.project.evoting.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.eddrix.project.evoting.R;
+import com.eddrix.project.evoting.activities.CandidateActivity;
 import com.eddrix.project.evoting.models.ElectionCandidates;
 
 import java.util.ArrayList;
@@ -49,6 +51,12 @@ public class ElectionCandidatesAdpater extends RecyclerView.Adapter<ElectionCand
         holder.des.setText(squareMediumModel.getPartyDescription());
         holder.company.setText(squareMediumModel.getLeadername());
 
+        holder.constraintLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                context.startActivity(new Intent(context, CandidateActivity.class));
+            }
+        });
 
 
 

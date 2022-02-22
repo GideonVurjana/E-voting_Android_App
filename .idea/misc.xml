@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.209375" />
-        <entry key="app/src/main/res/layout/activity_candidate_vote.xml" value="0.12001811594202899" />
+        <entry key="app/src/main/res/layout/activity_candidate_vote.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_elected_candidates.xml" value="0.12001811594202899" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_splashscreen.xml" value="0.2" />

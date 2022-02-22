@@ -67,12 +67,12 @@ public class ElectedCandidatesActivity extends AppCompatActivity {
 
         List<ElectionCandidates> homeProjectsPostModelList=new ArrayList<>();
 
-        homeProjectsPostModelList.add(new ElectionCandidates(1,"Janasena Party","",R.drawable.janasena,"some description here we shall put"));
-        homeProjectsPostModelList.add(new ElectionCandidates(2,"Janasena Party","",R.drawable.janasena,"some description here we shall put"));
-        homeProjectsPostModelList.add(new ElectionCandidates(3,"Janasena Party","",R.drawable.janasena,"some description here we shall put"));
-        homeProjectsPostModelList.add(new ElectionCandidates(4,"Janasena Party","",R.drawable.janasena,"some description here we shall put"));
-        homeProjectsPostModelList.add(new ElectionCandidates(5,"Janasena Party","",R.drawable.janasena,"some description here we shall put"));
-        homeProjectsPostModelList.add(new ElectionCandidates(6,"Janasena Party","",R.drawable.janasena,"some description here we shall put"));
+        homeProjectsPostModelList.add(new ElectionCandidates(1,"Janasena Party","Pavan Kalyan",R.drawable.janasena,"some description here we shall put"));
+        homeProjectsPostModelList.add(new ElectionCandidates(2,"BJP Party","Pavan Kalyan",R.drawable.bjp,"some description here we shall put"));
+        homeProjectsPostModelList.add(new ElectionCandidates(3,"Congress Party","Pavan Kalyan",R.drawable.congress,"some description here we shall put"));
+        homeProjectsPostModelList.add(new ElectionCandidates(4,"Telugu Desam Party","Pavan Kalyan",R.drawable.telugu,"some description here we shall put"));
+        homeProjectsPostModelList.add(new ElectionCandidates(5,"CPI Party","Pavan Kalyan",R.drawable.cpi,"some description here we shall put"));
+        homeProjectsPostModelList.add(new ElectionCandidates(6,"Janasena Party","Pavan Kalyan",R.drawable.janasena,"some description here we shall put"));
 
         ElectionCandidatesAdpater projectRecyclerView=new
                 ElectionCandidatesAdpater(homeProjectsPostModelList,this);

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.eddrix.project.evoting">
 
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 
 
     <application
@@ -40,6 +43,12 @@
         <activity
             android:screenOrientation="portrait"
             android:name=".activities.CandidateDP_Screen" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activities.ActivityRegisteration" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activities.ActivityLogin" />
     </application>
 
 </manifest>

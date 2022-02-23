@@ -42,7 +42,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
 
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(this.getResources().getColor(R.color.colorAccent));
+            window.setStatusBarColor(this.getResources().getColor(R.color.black));
             window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
 
@@ -50,7 +50,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         }else if(Build.VERSION.SDK_INT<22){
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(this.getResources().getColor(R.color.colorAccent));
+            window.setStatusBarColor(this.getResources().getColor(R.color.black));
 
         }
         setContentView(R.layout.activity_login);
@@ -60,7 +60,7 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
 
 
         toolbar.setTitle("Login");
-        toolbar.setTitleTextColor(getResources().getColor(R.color.mred));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorAccent));
         setSupportActionBar(toolbar);
         username=findViewById(R.id.username);
         password=findViewById(R.id.email);
@@ -101,59 +101,10 @@ public class ActivityLogin extends AppCompatActivity implements View.OnClickList
         map.put("PASSWORD",password);
         Loader(true,"Logging you in");
 
-//        Call<Response> responseCall= RetrofitBuilder.getInstance().getRetrofit().login(map);
-//        responseCall.enqueue(new Callback<Response>() {
-//            @Override
-//            public void onResponse(@NonNull Call<Response> call,
-//                                   @NonNull retrofit2.Response<Response> response) {
-//
-//                Loader(false,"Logging you in");
-//
-//                if(response.isSuccessful()){
-//
-//                    assert response.body() != null;
-//                    if(!response.body().isERROR()){
-//
-//                        // login suyccess...
-//
-//                        loginSuccess(response.body().getUSER());
-//                    }else {
-//                        //error credentials....
-//                        Toast.makeText(getApplicationContext(),"Wrong Credentials",Toast.LENGTH_LONG).show();
-//                        button.setEnabled(true);
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(@NonNull Call<Response> call, @NonNull Throwable t) {
-//                Loader(false,"Logging you in");
-//                Toast.makeText(getApplicationContext(),"Something Wrong. Try Again !",Toast.LENGTH_LONG).show();
-//
-//                button.setEnabled(true);
-//
-//            }
-//        });
 
 
     }
 
-//    private void loginSuccess(USER user) {
-//
-//        MyPreferences myPreferences=new MyPreferences(this);
-//        myPreferences.setUID(String.valueOf(user.getUid()));
-//        myPreferences.setUserName(Objects.requireNonNull(username.getText()).toString());
-//        if (user.getUserType()==1)
-//            myPreferences.set_isStudent(true);
-//        else
-//            myPreferences.set_isStudent(false);
-//        button.setEnabled(true);
-//        myPreferences.setVerified(true);
-//        finish();
-//        startActivity(new Intent(ActivityLogin.this,MainActivity.class));
-//
-//
-//    }
 
     private boolean checkFields() {
 

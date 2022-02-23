@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
-        app:lottie_rawRes="@raw/book_loader" />
+        app:lottie_rawRes="@raw/loader" />
 
     <TextView
         android:id="@+id/textView9"

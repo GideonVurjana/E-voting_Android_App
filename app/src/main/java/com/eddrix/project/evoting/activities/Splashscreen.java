@@ -53,15 +53,15 @@ public class Splashscreen extends AppCompatActivity {
 
             MyPreferences myPreferences=new MyPreferences(getApplicationContext());
 
-            //if(!myPreferences.getVerified()){
+            if(!myPreferences.getVerified()){
 
-           // startActivity(new Intent(Splashscreen.this, ActivityLogin.class));
+            startActivity(new Intent(Splashscreen.this, ActivityLogin.class));
 
 
-            //}else{
+            }else{
                 //launch login activity..
                 startActivity(new Intent(Splashscreen.this,MainActivity.class));
-            //}
+            }
 
             finish();
         }, TIME);

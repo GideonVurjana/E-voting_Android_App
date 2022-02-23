@@ -1,10 +1,12 @@
 package com.eddrix.project.evoting.activities;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -24,6 +26,7 @@ public class ActivityRegisteration extends AppCompatActivity implements View.OnC
 {
 
     Toolbar toolbar;
+    Button register;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +37,7 @@ public class ActivityRegisteration extends AppCompatActivity implements View.OnC
 
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(this.getResources().getColor(R.color.colorAccent));
+            window.setStatusBarColor(this.getResources().getColor(R.color.black));
             window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
 
@@ -42,13 +45,13 @@ public class ActivityRegisteration extends AppCompatActivity implements View.OnC
         }else if(Build.VERSION.SDK_INT<22){
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-            window.setStatusBarColor(this.getResources().getColor(R.color.colorAccent));
+            window.setStatusBarColor(this.getResources().getColor(R.color.black));
 
         }
 
         setContentView(R.layout.activity_reg);
 
-
+        register=findViewById(R.id.reg_Proceed);
         toolbar=findViewById(R.id.toolbar);
 
 
@@ -61,7 +64,7 @@ public class ActivityRegisteration extends AppCompatActivity implements View.OnC
         toolbar.setNavigationIcon(R.drawable.back);
         toolbar.setNavigationOnClickListener(view -> finish());
 
-
+        register.setOnClickListener(this);
 
 
     }
@@ -72,7 +75,11 @@ public class ActivityRegisteration extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View v) {
 
+        if(v.getId()==R.id.reg_Proceed){
 
+            // start main activity..
+            startActivity(new Intent(ActivityRegisteration.this,MainActivity.class));
+        }
 
     }
 
